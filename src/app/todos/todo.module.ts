@@ -8,6 +8,7 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoPageComponent } from './todo-page/todo-page.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { FiltroPipe } from './filtro.pipe';
 
 
 
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     TodoFooterComponent,
     TodoListComponent,
      TodoItemComponent,
-     TodoPageComponent
+     TodoPageComponent,
+     FiltroPipe
   ],
   imports: [
     CommonModule,

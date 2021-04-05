@@ -13,7 +13,6 @@ export class TodoPageComponent implements OnInit {
   completado:boolean = false
 
   constructor(private store:Store<AppState>) {
-
   }
 
   ngOnInit(): void {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Todo } from '../models/todo.model';
 import { AppState } from '../../app.reducer';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-todo-list',
@@ -9,12 +10,10 @@ import { AppState } from '../../app.reducer';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
-
-  todos:Todo[] = []
+  STORE: Observable<AppState>;
   constructor(private store:Store<AppState>) {
-    this.store.select('todos').subscribe( (todos:Todo[]) =>this.todos= todos);
+    this.STORE = this.store
   }
-
   ngOnInit(): void {
   }
 
